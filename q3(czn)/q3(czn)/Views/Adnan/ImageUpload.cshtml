@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "ImageUpload";
+}
+
+<div class="content products" id="menu-2">
+    <div class="container">
+        <div class="row">
+
+            @using (Html.BeginForm("ImageUpload", "Adnan", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Product</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Image</label>
+                        <input type="file" name="file" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input type="submit" class="btn btn-success" value="Add">
+                </div>
+            }
+        </div> <!-- /.row -->
+    </div> <!-- /.slide-item -->
+</div>
+
